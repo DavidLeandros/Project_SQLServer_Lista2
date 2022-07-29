@@ -38,3 +38,12 @@ CREATE TABLE tb_compras (
 	FOREIGN KEY (FK_usuario) REFERENCES tb_usuarios (Id),
 	FOREIGN KEY (FK_grupo) REFERENCES tb_grupos (Id),
 );
+DROP TABLE tb_compras;
+
+CREATE TABLE tb_inscritos (
+	data DATE NOT NULL,
+	FK_usuario INT NOT NULL,
+	FK_grupo INT NOT NULL,
+	FOREIGN KEY (FK_usuario) REFERENCES tb_usuarios (Id),
+	FOREIGN KEY (FK_grupo) REFERENCES tb_grupos (Id),
+);
